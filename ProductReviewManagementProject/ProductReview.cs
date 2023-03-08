@@ -13,7 +13,12 @@ namespace ProductReviewManagementProject
             public double Rating { get; set; }
             public string Review { get; set; }
             public bool isLike { get; set; }
+
+        public override string ToString()
+        {
+            return $"UserId:{UserId} ProductId:{ProductId} Rating:{Rating} Review:{Review} islike:{isLike}";
         }
+    }
 
     
 }
