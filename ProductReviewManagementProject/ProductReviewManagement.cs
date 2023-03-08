@@ -34,11 +34,18 @@ namespace ProductReviewManagementProject
 
         public static void DisplayProductIdAndReview(List<ProductReview> list)
         {
+            Console.WriteLine("\n Display productId and review");
             var result = list.Select(p => new { Id = p.ProductId, review = p.Review }).ToList();
             foreach(var product in result)
             {
                 Console.WriteLine("ProductId:" +product.Id + " " + "Review:" + product.review) ;
             }
+        }
+        public static void SkipTop5Records(List<ProductReview> list)
+        {
+            Console.WriteLine("Skip Top 5 Records");
+            List<ProductReview> result = list.Skip(5).ToList();
+            Program.DisplayProductReview(result);
         }
 
     }
