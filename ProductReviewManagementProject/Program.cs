@@ -22,10 +22,10 @@ namespace ProductReviewManagementProject
                 new ProductReview() { ProductId = 5, UserId = 5, Rating = 20, Review = "Bad",      isLike = true },
                 new ProductReview() { ProductId = 5, UserId = 6, Rating = 20, Review = "Bad",      isLike = true },
                 new ProductReview() { ProductId = 6, UserId = 7, Rating = 10, Review = "Very Bad", isLike = true },
-                new ProductReview() { ProductId = 6, UserId = 8, Rating = 30, Review = "nice" ,    isLike = true }
+                new ProductReview() { ProductId = 9, UserId = 8, Rating = 30, Review = "nice" ,    isLike = true }
             };
-           // DisplayProductReview(list);
-            ProductReviewManagement.RetriveTop3records(list);
+            // DisplayProductReview(list);
+            ProductReviewManagement.FetchRecordBasedonRatingAndProductId(list);
             Console.ReadLine();
         }
         public static void DisplayProductReview(List<ProductReview> list)
