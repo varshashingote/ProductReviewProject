@@ -48,6 +48,16 @@ namespace ProductReviewManagementProject
             Program.DisplayProductReview(result);
         }
 
+        //UC7
+        public static void DisplayProductIdAndReview2(List<ProductReview> list)
+        {
+            Console.WriteLine("\n Display productId and review");
+            var result = list.Select(p => new { Id = p.ProductId, review = p.Review }).ToList();
+            foreach (var product in result)
+            {
+                Console.WriteLine("ProductId:" + product.Id + " " + "Review:" + product.review);
+            }
+        }
     }
 }
 
