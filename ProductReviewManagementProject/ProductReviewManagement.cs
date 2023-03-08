@@ -66,6 +66,12 @@ namespace ProductReviewManagementProject
             List<ProductReview> result = list.Where(x => x.isLike == true).OrderBy(x => x.isLike).ToList();
             Program.DisplayProductReview(result);
         }
+        //UC10
+        public static void FindAverageRecords(List<ProductReview> list)
+        {
+            var result = list.Average(p => p.Rating);
+            Console.WriteLine("Average records are: {0}", result);
+        }
     }
 }
 
