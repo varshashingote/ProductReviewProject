@@ -19,14 +19,14 @@ namespace ProductReviewManagementProject
                 new ProductReview() { ProductId = 4, UserId = 3, Rating = 40, Review = "nice",     isLike = true },
                 new ProductReview() { ProductId = 3, UserId = 3, Rating = 36, Review = "Average",  isLike = false },
                 new ProductReview() { ProductId = 3, UserId = 4, Rating = 58, Review = "Excellent", isLike = true },
-                new ProductReview() { ProductId = 4, UserId = 5, Rating = 30, Review = "Average",  isLike = true },
-                new ProductReview() { ProductId = 5, UserId = 5, Rating = 20, Review = "Bad",      isLike = true },
-                new ProductReview() { ProductId = 5, UserId = 6, Rating = 20, Review = "Bad",      isLike = true },
-                new ProductReview() { ProductId = 6, UserId = 7, Rating = 10, Review = "Very Bad", isLike = true },
+                new ProductReview() { ProductId = 4, UserId = 10, Rating = 30, Review = "Average",  isLike = true },
+                new ProductReview() { ProductId = 5, UserId = 10, Rating = 20, Review = "Bad",      isLike = true },
+                new ProductReview() { ProductId = 10, UserId = 6, Rating = 20, Review = "Bad",      isLike = true },
+                new ProductReview() { ProductId = 10, UserId = 7, Rating = 10, Review = "Very Bad", isLike = true },
                 new ProductReview() { ProductId = 9, UserId = 8, Rating = 30, Review = "nice" ,    isLike = true }
             };
             // DisplayProductReview(list);
-            ProductReviewManagement.FindRecordsContainMessageNice(list);
+            ProductReviewManagement.FindRecordsWhoseIdIs10(list);
             Console.ReadLine();
         }
         public static void DisplayProductReview(List<ProductReview> list)

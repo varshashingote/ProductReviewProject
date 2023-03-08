@@ -72,9 +72,16 @@ namespace ProductReviewManagementProject
             var result = list.Average(p => p.Rating);
             Console.WriteLine("Average records are: {0}", result);
         }
+        //UC11
         public static void FindRecordsContainMessageNice(List<ProductReview> list)
         {
             List<ProductReview> result = list.Where(p => p.Review.Contains("nice")).ToList();
+            Program.DisplayProductReview(result);
+        }
+        //UC12
+        public static void FindRecordsWhoseIdIs10(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(x => x.UserId == 10).OrderBy(x => x.Rating).ToList();
             Program.DisplayProductReview(result);
         }
     }
