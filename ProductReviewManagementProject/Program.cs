@@ -26,7 +26,7 @@ namespace ProductReviewManagementProject
                 new ProductReview() { ProductId = 9, UserId = 8, Rating = 30, Review = "nice" ,    isLike = true }
             };
             // DisplayProductReview(list);
-            ProductReviewManagement.FindingEachCountOfProductId(list);
+            ProductReviewManagement.DisplayProductIdAndReview(list);
             Console.ReadLine();
         }
         public static void DisplayProductReview(List<ProductReview> list)

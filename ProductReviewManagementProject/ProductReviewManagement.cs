@@ -32,6 +32,15 @@ namespace ProductReviewManagementProject
             }
         }
 
+        public static void DisplayProductIdAndReview(List<ProductReview> list)
+        {
+            var result = list.Select(p => new { Id = p.ProductId, review = p.Review }).ToList();
+            foreach(var product in result)
+            {
+                Console.WriteLine("ProductId:" +product.Id + " " + "Review:" + product.review) ;
+            }
+        }
+
     }
 }
 
