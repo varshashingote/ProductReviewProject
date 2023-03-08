@@ -58,6 +58,14 @@ namespace ProductReviewManagementProject
                 Console.WriteLine("ProductId:" + product.Id + " " + "Review:" + product.review);
             }
         }
+
+
+        //UC9
+        public static void FindRecordsWhoseIsLikeValueIsTrue(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(x => x.isLike == true).OrderBy(x => x.isLike).ToList();
+            Program.DisplayProductReview(result);
+        }
     }
 }
 
