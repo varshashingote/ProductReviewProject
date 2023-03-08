@@ -22,6 +22,16 @@ namespace ProductReviewManagementProject
             Program.DisplayProductReview(result);
 
         }
+        public static void FindingEachCountOfProductId(List<ProductReview> list)
+        {
+            Console.WriteLine("\n Finding each count of ProductId");
+            var result = list.GroupBy(p => p.ProductId).Select(p => new { Id = p.Key, count = p.Count() }).ToList();
+            foreach(var product in result)
+            {
+                Console.WriteLine(product.Id+" ->" +product.count);
+            }
+        }
+
     }
 }
 

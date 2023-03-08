@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace ProductReviewManagementProject
                 new ProductReview() { ProductId = 9, UserId = 8, Rating = 30, Review = "nice" ,    isLike = true }
             };
             // DisplayProductReview(list);
-            ProductReviewManagement.FetchRecordBasedonRatingAndProductId(list);
+            ProductReviewManagement.FindingEachCountOfProductId(list);
             Console.ReadLine();
         }
         public static void DisplayProductReview(List<ProductReview> list)
@@ -35,6 +36,6 @@ namespace ProductReviewManagementProject
                 Console.WriteLine(product);
             }
         }
-           
+          
     }
 }
