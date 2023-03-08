@@ -72,6 +72,11 @@ namespace ProductReviewManagementProject
             var result = list.Average(p => p.Rating);
             Console.WriteLine("Average records are: {0}", result);
         }
+        public static void FindRecordsContainMessageNice(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(p => p.Review.Contains("nice")).ToList();
+            Program.DisplayProductReview(result);
+        }
     }
 }
 
